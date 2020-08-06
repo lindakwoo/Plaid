@@ -80,19 +80,18 @@ let creditCardProvider = (operations) => {
     //push into final outputs array
     for(account of accounts){
         if(account["valid"]){
-            let dollar = "$"+account["balance"]
-            final.push([account["name"], dollar])
+            let dollar = "$"+account["balance"];
+            final.push([account["name"], dollar]);
         }else{
-            final.push([account["name"], "error"])
+            final.push([account["name"], "error"]);
         }
     }
 
     final.sort((a,b)=>{
-        return a[0].toLowerCase()>b[0].toLowerCase()?1:-1
+        return a[0].toLowerCase()>b[0].toLowerCase()?1:-1;
      })
 
     return final;
 
 }
-
 

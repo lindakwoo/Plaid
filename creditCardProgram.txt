@@ -88,7 +88,7 @@ let creditCardProvider = (operations) => {
     }
 
     final.sort((a,b)=>{
-        return a[0]>b[0]? 1 : -1;
+        return a[0].toLowerCase()>b[0].toLowerCase()?1:-1;
      })
 
     return final;
